@@ -1,0 +1,171 @@
+/* ---------------------- Navbar ---------------------- */
+.owner-navbar {
+  width: 100%;
+  background-color: #fff; /* خلفية بيضاء */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+}
+
+.owner-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.owner-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D4AF37; /* ذهبي */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.owner-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.owner-nav-links li a,
+.owner-nav-links li button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.owner-nav-links li a:hover,
+.owner-nav-links li button:hover {
+  color: #D4AF37;
+}
+
+.btn-logout {
+  background-color: #eb3b5a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive للهواتف */
+@media (max-width: 768px) {
+  .owner-navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .owner-nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ---------------------- Profile Dashboard ---------------------- */
+.profile-dashboard {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+  background-color: #f9f9f9; /* خلفية خفيفة للصفحة */
+  min-height: calc(100vh - 80px); /* لتغطية كامل الصفحة بدون Navbar */
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 400px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.profile-header button {
+  padding: 6px 12px;
+  background-color: #f6b93b;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.profile-header button:hover {
+  background-color: #fa983a;
+}
+
+.profile-body .profile-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.profile-body .profile-field label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.profile-body .profile-field input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.profile-body .profile-field input:focus {
+  border-color: #D4AF37;
+}
+
+/* Responsive Profile Cards */
+@media (max-width: 900px) {
+  .profile-dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card {
+    width: 90%;
+  }
+}

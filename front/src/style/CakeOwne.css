@@ -1,0 +1,44 @@
+.cake-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.cake-navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.cake-navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cake-navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.cake-navbar-links a:hover {
+  color: #d35400;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}

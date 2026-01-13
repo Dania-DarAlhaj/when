@@ -1,0 +1,71 @@
+/* ========== NAVBAR ========== */
+body {
+  padding-top: 80px; /* أو حسب ارتفاع الناف بار */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #8B5E3C 0%, #A97458 100%);
+  padding: 0.8rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.navbar button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background: #e74c3c;
+  box-shadow: 0 4px 12px rgba(231,76,60,0.3);
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  box-shadow: 0 6px 18px rgba(231,76,60,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.booking-table- {
+  margin-top: 700px; /* نفس ارتفاع الناف بار تقريباً */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  padding: 0 2rem;
+}

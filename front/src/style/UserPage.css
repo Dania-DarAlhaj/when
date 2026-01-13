@@ -1,0 +1,308 @@
+/* ==================== ELEGANT LUXURY FORM STYLES ==================== */
+/* Simplified, light, and sophisticated design */
+
+/* ==================== SMOOTH ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes softShimmer {
+  0% { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 0.6;
+  }
+  100% { 
+    opacity: 0.3;
+  }
+}
+
+/* ==================== COLOR PALETTE ==================== */
+:root {
+  --gold-elegant: #C9A961;
+  --gold-light: #E8D7B8;
+  --cream: #FAF8F3;
+  --white: #FFFFFF;
+  --text-primary: #5A4A3A;
+  --text-secondary: #8B7E70;
+  --border-light: rgba(201, 169, 97, 0.2);
+  --shadow-soft: 0 10px 40px rgba(201, 169, 97, 0.15);
+}
+
+/* ==================== MAIN CONTAINER ==================== */
+.user-container,
+.userpage-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #FAF8F3 0%, #F5F0E8 50%, #FFF9F0 100%);
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background accent */
+.user-container::before,
+.userpage-container::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: gentleFloat 20s ease-in-out infinite;
+}
+
+/* ==================== ELEGANT CARD ==================== */
+.user-card,
+.userpage-container {
+  width: 100%;
+  max-width: 600px;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Subtle top border accent */
+.user-card::before,
+.userpage-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--gold-elegant), 
+    transparent);
+  border-radius: 0 0 2px 2px;
+  animation: softShimmer 3s ease-in-out infinite;
+}
+
+/* ==================== HEADER ==================== */
+.user-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.user-title,
+.userpage-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.8rem 0;
+  letter-spacing: -0.5px;
+}
+
+.user-sub {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.user-info {
+  margin: 2rem 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7;
+  padding: 1.2rem 1.5rem;
+  background: rgba(201, 169, 97, 0.05);
+  border-radius: 12px;
+  border-left: 3px solid var(--gold-elegant);
+}
+
+/* ==================== FORM ELEMENTS ==================== */
+.user-form,
+.userpage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-left: 0.5rem;
+}
+
+/* ==================== REFINED INPUTS ==================== */
+.form-input,
+.userpage-form input,
+.userpage-form select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  background: var(--white);
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.userpage-form input:focus,
+.userpage-form select:focus {
+  outline: none;
+  border-color: var(--gold-elegant);
+  box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* ==================== SELECT STYLING ==================== */
+.userpage-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23C9A961' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+/* ==================== ELEGANT BUTTON ==================== */
+.btn-primary,
+.userpage-form button {
+  width: 100%;
+  padding: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--gold-elegant) 0%, var(--gold-light) 100%);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+  margin-top: 1rem;
+}
+
+.btn-primary:hover,
+.userpage-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+}
+
+.btn-primary:active,
+.userpage-form button:active {
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .user-container,
+  .userpage-container {
+    padding: 1.5rem;
+  }
+
+  .user-card,
+  .userpage-container {
+    padding: 2.5rem 2rem;
+  }
+
+  .user-title,
+  .userpage-container h2 {
+    font-size: 2rem;
+  }
+
+  .user-sub {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-card,
+  .userpage-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .user-title,
+  .userpage-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-input,
+  .userpage-form input,
+  .userpage-form select {
+    padding: 0.9rem 1rem;
+  }
+
+  .btn-primary,
+  .userpage-form button {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.form-input:focus-visible,
+.userpage-form input:focus-visible,
+.userpage-form select:focus-visible,
+.btn-primary:focus-visible,
+.userpage-form button:focus-visible {
+  outline: 2px solid var(--gold-elegant);
+  outline-offset: 2px;
+}
+
+/* ==================== SMOOTH SCROLL ==================== */
+html {
+  scroll-behavior: smooth;
+}
