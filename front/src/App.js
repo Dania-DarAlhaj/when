@@ -22,6 +22,7 @@ import OwnerSearchBookings from "./components/OwnerSearchBookings";
 import CakeProfile from "./components/Cakeprofile";
 import Cakevisit from "./components/Cakevisit";
 import CakeManageItems from "./components/CakeManageItems";
+import VisitFormHall from "./components/VisitFormHall";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
       <Route path="/Cakeprofile" element={<CakeProfile />} />
       <Route path="/Cakevisit" element={<Cakevisit />} />
       <Route path="/CakeManageItems" element={<CakeManageItems />} />
+      <Route path="/VisitFormHall" element={<VisitFormHall />} />
 
 
     </Routes>

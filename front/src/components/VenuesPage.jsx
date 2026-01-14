@@ -94,7 +94,7 @@ const fetchFilteredVenues = async (filters) => {
 
  const navigate = useNavigate();
   /* ================= FILTERS ================= */
-  const locations = ['all', 'Ramallah', 'Nablus', 'Bethlehem', 'Hebron'];
+  const locations = ['all', 'Ramallah', 'Nablus', 'Bethlehem', 'Hebron', "Jerusalem", "Jenin", "Tulkarm", "Qalqilya", "Salfit", "Tubas", "Jericho"];
 
   const priceRanges = [
     { value: 'all', label: 'All Prices' },

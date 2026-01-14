@@ -119,6 +119,8 @@ export default function VenueOwnerPage() {
       return { ...prev, [hallId]: newImages };
     });
   };
+const formatHallName = (name) =>
+  name.replace(/\s+/g, "_");
 
   const handleAddImages = (hallId, e) => {
     const files = Array.from(e.target.files);
@@ -143,7 +145,7 @@ export default function VenueOwnerPage() {
       <nav className="navbar">
         <div className="navbar-left">
           <button onClick={() => setEditMode(false)}>Profile</button>
-          <button onClick={() => navigate("/visit-form", { state: { userId } })}>Visit Form</button>
+          <button onClick={() => navigate("/VisitFormHall", { state: { userId } })}>Visit Form</button>
 <button
   onClick={() =>
     navigate(`/OwnerSearchBookings/${ownerData.owner_id}`)
@@ -288,15 +290,24 @@ export default function VenueOwnerPage() {
             />
           </label>
 
-          <div className="hall-images">
-            {hallImages[hall.hall_id].map((img, index) => (
-              <div key={index} className="hall-image-wrapper">
-                <img src={img.trim()} alt={`${hall.hall_type} ${index + 1}`} />
-                {editMode && hallImages[hall.hall_id].length > 1 && (
-                  <button type="button" onClick={() => handleRemoveImage(hall.hall_id, index)}>×</button>
-                )}
-              </div>
-            ))}
+         <div className="hall-images">
+  {hallImages[hall.hall_id].map((_, index) => (
+    <div key={index} className="hall-image-wrapper">
+      <img
+        src={`/img/hall/${formatHallName(hall.imgurl)}`}
+        alt={`${hall.imgurl} ${index + 1}`}
+      />
+
+      {editMode && hallImages[hall.hall_id].length > 1 && (
+        <button
+          type="button"
+          onClick={() => handleRemoveImage(hall.hall_id, index)}
+        >
+          ×
+        </button>
+      )}
+    </div>
+  ))}
 
             {editMode && (
               <input 

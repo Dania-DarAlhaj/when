@@ -113,11 +113,11 @@ const handleVisitSubmit = async (e) => {
     .from("visit")
     .insert([
       {
-        user_id: userIdDb,
+        user_id: sessionStorage.getItem("userId_"),
         owner_id: userId,
         visit_date: visitDate.toISOString().split("T")[0],
         visit_time: visitTime,
-        accept: false // بشكل افتراضي لم يتم القبول بعد
+        accept: false
       }
     ]);
 
@@ -125,6 +125,7 @@ const handleVisitSubmit = async (e) => {
     setVisitMessage(error.message);
   } else {
     setVisitMessage("✅ Visit scheduled successfully!");
+    alert("Your visit request has been submitted successfully , waiting for approval.");
     setVisitDate(null);
     setVisitTime("");
     setShowVisitForm(false);
